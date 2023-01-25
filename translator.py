@@ -39,6 +39,13 @@ def change_languages():
     tgt_lang = tgt_lang_combo.get()
     src_lang_combo.set(tgt_lang)
     tgt_lang_combo.set(src_lang)
+    src_text = src_text_box.get(1.0, END)
+    tgt_text = tgt_text_box.get(1.0, END)
+    src_text_box.delete(1.0, END)
+    tgt_text_box.delete(1.0, END)
+    src_text_box.insert(1.0, tgt_text)
+    tgt_text_box.insert(1.0, src_text)
+    label_change()
 
 if __name__ == "__main__":
 
