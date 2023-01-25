@@ -28,5 +28,5 @@ Not all languages are supported by the library.
 All contributions are welcome. Please open an issue or submit a pull request if you have any suggestions or find any bugs.
 
 ## References
-This project was based on tutorial `https://www.youtube.com/watch?v=3ydfbFFrPWE`
+This project was based on tutorial [how to create translator using python | python tkinter](https://www.youtube.com/watch?v=3ydfbFFrPWE)
 New change button functionality was added and another library was used, which took to re-write the translate function
