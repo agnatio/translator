@@ -30,6 +30,16 @@ def translate_now():
         messagebox.showerror("Error", e)
         print(e)
 
+
+def change_languages():
+    """
+    This function is used to change the languages
+    """
+    src_lang = src_lang_combo.get()
+    tgt_lang = tgt_lang_combo.get()
+    src_lang_combo.set(tgt_lang)
+    tgt_lang_combo.set(src_lang)
+
 if __name__ == "__main__":
 
     root = Tk()
@@ -39,7 +49,10 @@ if __name__ == "__main__":
 
     arrow_image = PhotoImage(file="arrows1.png")
     image_label = Label(root, image=arrow_image, bg="lightblue")
-    image_label.place(x=480, y=130)
+    
+    change_button = Button(root, image=arrow_image, compound="center", font=("Helvetica", 20), command=change_languages, fg="lightblue", borderwidth=0, activebackground="lightblue", relief="flat", bg="lightblue")
+    change_button.place(x=485, y=130)
+
 
     language = GoogleTranslator().get_supported_languages(as_dict=True)
     languagesV = list(language.keys())
